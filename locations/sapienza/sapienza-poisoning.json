@@ -1,0 +1,416 @@
+{
+  "Data": {
+    "Objectives": [
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000001",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 28450743-2507-48bf-9b30-e3a47e942faa).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 28450743-2507-48bf-9b30-e3a47e942faa).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "28450743-2507-48bf-9b30-e3a47e942faa" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "28450743-2507-48bf-9b30-e3a47e942faa" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "28450743-2507-48bf-9b30-e3a47e942faa" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000001", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000001", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "28450743-2507-48bf-9b30-e3a47e942faa" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "28450743-2507-48bf-9b30-e3a47e942faa" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "28450743-2507-48bf-9b30-e3a47e942faa" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000002",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository bb15423f-bc60-4c49-ae0b-ee0a8843cbcc).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository bb15423f-bc60-4c49-ae0b-ee0a8843cbcc).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000002", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000002", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000004",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 719b7083-58ed-498a-b5ab-824985d9ac5e).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 719b7083-58ed-498a-b5ab-824985d9ac5e).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000004", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000004", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "719b7083-58ed-498a-b5ab-824985d9ac5e" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000005",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000005", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000005", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000006",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 82302da5-caea-4d8f-b82b-c43c2e4f1897).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 82302da5-caea-4d8f-b82b-c43c2e4f1897).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000006", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000006", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "82302da5-caea-4d8f-b82b-c43c2e4f1897" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000007",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 8cab3cdd-476e-42a9-a7c7-fbd87cc42819).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 8cab3cdd-476e-42a9-a7c7-fbd87cc42819).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000007", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000007", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000008",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 1d16a6df-9490-4c0c-87f7-0c9ec3b6b331).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 1d16a6df-9490-4c0c-87f7-0c9ec3b6b331).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000008", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000008", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000009",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 56704777-c0f4-4a46-b0e5-c5c0a79692b4).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 56704777-c0f4-4a46-b0e5-c5c0a79692b4).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000009", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000009", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "56704777-c0f4-4a46-b0e5-c5c0a79692b4" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000010",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 39071561-139e-4cbf-8af9-2b57ea0a32c7).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 39071561-139e-4cbf-8af9-2b57ea0a32c7).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000010", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000010", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "39071561-139e-4cbf-8af9-2b57ea0a32c7" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000011",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 15c2e082-0093-4b27-804c-f24880e1097f).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 15c2e082-0093-4b27-804c-f24880e1097f).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "15c2e082-0093-4b27-804c-f24880e1097f" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "15c2e082-0093-4b27-804c-f24880e1097f" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "15c2e082-0093-4b27-804c-f24880e1097f" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000011", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000011", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "15c2e082-0093-4b27-804c-f24880e1097f" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "15c2e082-0093-4b27-804c-f24880e1097f" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "15c2e082-0093-4b27-804c-f24880e1097f" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000012",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 3cbab11e-8657-40eb-b190-4ddb3bea625d).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 3cbab11e-8657-40eb-b190-4ddb3bea625d).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000012", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000012", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "3cbab11e-8657-40eb-b190-4ddb3bea625d" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000013",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 2bf8c4ca-c73b-4bad-b338-0cd1b797f305).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 2bf8c4ca-c73b-4bad-b338-0cd1b797f305).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000013", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000013", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000014",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 7a77a85c-80fa-4d6a-b0f8-daea155132c6).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 7a77a85c-80fa-4d6a-b0f8-daea155132c6).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000014", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000014", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "7a77a85c-80fa-4d6a-b0f8-daea155132c6" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000015",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000015", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000015", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000016",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 8d5f03f0-f817-4f07-8c37-5faa032cf98c).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 8d5f03f0-f817-4f07-8c37-5faa032cf98c).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000016", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000016", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "8d5f03f0-f817-4f07-8c37-5faa032cf98c" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000018",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 73349b54-9b7a-47a8-906e-e04ad44ae174).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 73349b54-9b7a-47a8-906e-e04ad44ae174).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000018", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000018", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "73349b54-9b7a-47a8-906e-e04ad44ae174" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000019",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository b0c6e7eb-df44-4552-bd5a-91acc48e6564).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository b0c6e7eb-df44-4552-bd5a-91acc48e6564).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000019", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000019", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "b0c6e7eb-df44-4552-bd5a-91acc48e6564" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000020",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository ad75c445-13e3-45bd-a0d2-6fcac6d6d818).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository ad75c445-13e3-45bd-a0d2-6fcac6d6d818).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000020", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000020", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000021",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 0bb5554e-a34c-4a87-9014-cfac43cf6c81).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 0bb5554e-a34c-4a87-9014-cfac43cf6c81).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000021", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000021", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "0bb5554e-a34c-4a87-9014-cfac43cf6c81" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000022",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 296e87ca-3637-420e-b223-e5ade23fee10).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 296e87ca-3637-420e-b223-e5ade23fee10).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "296e87ca-3637-420e-b223-e5ade23fee10" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "296e87ca-3637-420e-b223-e5ade23fee10" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "296e87ca-3637-420e-b223-e5ade23fee10" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000022", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000022", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "296e87ca-3637-420e-b223-e5ade23fee10" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "296e87ca-3637-420e-b223-e5ade23fee10" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "296e87ca-3637-420e-b223-e5ade23fee10" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000023",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository e5baa2bb-809d-4ec0-aa04-c686c1bebc50).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository e5baa2bb-809d-4ec0-aa04-c686c1bebc50).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000023", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000023", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000024",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 47e4607e-6e4b-4779-ae4b-ac630484b127).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 47e4607e-6e4b-4779-ae4b-ac630484b127).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000024", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000024", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "47e4607e-6e4b-4779-ae4b-ac630484b127" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000025",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 7a714602-2103-4271-9766-233b9e2154db).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 7a714602-2103-4271-9766-233b9e2154db).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "7a714602-2103-4271-9766-233b9e2154db" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "7a714602-2103-4271-9766-233b9e2154db" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "7a714602-2103-4271-9766-233b9e2154db" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000025", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000025", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "7a714602-2103-4271-9766-233b9e2154db" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "7a714602-2103-4271-9766-233b9e2154db" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "7a714602-2103-4271-9766-233b9e2154db" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000026",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository f25f91ed-007b-44de-a323-68d8a320bf64).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository f25f91ed-007b-44de-a323-68d8a320bf64).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000026", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000026", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "f25f91ed-007b-44de-a323-68d8a320bf64" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000028",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 103ea50a-6d9c-4c51-bf9f-0935d2c27b58).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 103ea50a-6d9c-4c51-bf9f-0935d2c27b58).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000028", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000028", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" ] }, "Transition": "Failure" } ] } } }
+      },
+      {
+        "Type": "statemachine", "Id": "11111111-0000-0000-0000-000000000029",
+        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository c0194374-3f9b-452f-afc4-6102d1ee219d).Name" } },
+        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository c0194374-3f9b-452f-afc4-6102d1ee219d).Name" } } },
+        "Category": "primary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, "Transition": "Failure" } ] } } },
+        "TargetConditions": [ { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "22222222-0000-0000-0000-000000000029", "KillMethod": "consumed_poison" } ]
+      },
+      {
+        "Type": "statemachine", "Id": "22222222-0000-0000-0000-000000000029", "Category": "secondary",
+        "Definition": { "Scope": "Hit", "Context": { "Targets": [ "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, "States": { "Start": { "Kill": [ { "Condition": { "$and": [ { "$eq": [ "$Value.RepositoryId", "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } } ] }, "Transition": "Success" }, { "Condition": { "$eq": [ "$Value.RepositoryId", "c0194374-3f9b-452f-afc4-6102d1ee219d" ] }, "Transition": "Failure" } ] } } }
+      }
+    ],
+    "MandatoryLoadout": [
+      { "Id": "FIREARMS_HERO_PISTOL_TACTICAL_ICA_19", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54" } },
+      { "Id": "Firearm_Dartgun_Tranquilizer", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "26b5496d-9a8c-4059-9d69-d8712078a33c" } },
+      { "Id": "Firearm_Dartgun_EmeticPoison", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "351c144c-8687-426a-a6f0-c4abd7021062" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+      { "Id": "Tools_Handyman_Wrench", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "494e74b2-f3c0-4c77-be15-8f22a6eed97b" } },
+      { "Id": "Tools_Lockpick_S2", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "3ccbcbac-5822-4d26-bf10-7cd59796b822" } },
+      { "Id": "Tools_Crowbar_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ed550539-722d-447f-8ddf-207ed3402245" } },
+      { "Id": "Tools_Screwdriver_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "beb83e04-23d7-41ec-861b-eb014ebe474a" } }
+    ],
+    "GameChangers": [],
+    "Bricks": []
+  },
+  "Metadata": {
+    "Title": "Sapienza Mass Poisoning",
+    "Description": "Why do these people keep drinking coffee thats clearly poisoned? Are they stupid?",
+    "Entitlements": [
+      "LOCATION_COASTALTOWN"
+    ],
+    "ScenePath": "assembly:/_PRO/Scenes/Missions/CoastalTown/_scene_octopus.entity",
+    "Location": "LOCATION_COASTALTOWN",
+    "IsPublished": true,
+    "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+    "GameVersion": "8.23.0.0",
+    "ServerVersion": "8.23.0.0",
+    "Type": "featured",
+    "Id": "932099f0-ae46-4dea-9382-5c7b6df2cf65",
+    "PublicId": "112340851397",
+    "TileImage": "images/unlockables/item_perspective_ef63eda6-6411-4ce0-b35b-143fc5767fc0_0.jpg",
+    "GroupObjectiveDisplayOrder": [
+      { "Id": "28450743-2507-48bf-9b30-e3a47e942faa" },
+      { "Id": "bb15423f-bc60-4c49-ae0b-ee0a8843cbcc" },
+      { "Id": "719b7083-58ed-498a-b5ab-824985d9ac5e" },
+      { "Id": "f4eddacb-fbbf-4a8c-9b76-19bef19c8ba3" },
+      { "Id": "82302da5-caea-4d8f-b82b-c43c2e4f1897" },
+      { "Id": "8cab3cdd-476e-42a9-a7c7-fbd87cc42819" },
+      { "Id": "1d16a6df-9490-4c0c-87f7-0c9ec3b6b331" },
+      { "Id": "56704777-c0f4-4a46-b0e5-c5c0a79692b4" },
+      { "Id": "39071561-139e-4cbf-8af9-2b57ea0a32c7" },
+      { "Id": "15c2e082-0093-4b27-804c-f24880e1097f" },
+      { "Id": "3cbab11e-8657-40eb-b190-4ddb3bea625d" },
+      { "Id": "2bf8c4ca-c73b-4bad-b338-0cd1b797f305" },
+      { "Id": "7a77a85c-80fa-4d6a-b0f8-daea155132c6" },
+      { "Id": "1f6cbfc3-06d5-49b2-9eca-ca22bde2bbf3" },
+      { "Id": "8d5f03f0-f817-4f07-8c37-5faa032cf98c" },
+      { "Id": "73349b54-9b7a-47a8-906e-e04ad44ae174" },
+      { "Id": "b0c6e7eb-df44-4552-bd5a-91acc48e6564" },
+      { "Id": "ad75c445-13e3-45bd-a0d2-6fcac6d6d818" },
+      { "Id": "0bb5554e-a34c-4a87-9014-cfac43cf6c81" },
+      { "Id": "296e87ca-3637-420e-b223-e5ade23fee10" },
+      { "Id": "e5baa2bb-809d-4ec0-aa04-c686c1bebc50" },
+      { "Id": "47e4607e-6e4b-4779-ae4b-ac630484b127" },
+      { "Id": "7a714602-2103-4271-9766-233b9e2154db" },
+      { "Id": "f25f91ed-007b-44de-a323-68d8a320bf64" },
+      { "Id": "103ea50a-6d9c-4c51-bf9f-0935d2c27b58" },
+      { "Id": "c0194374-3f9b-452f-afc4-6102d1ee219d" }
+    ],
+    "CreationTimestamp": "2026-04-12T00:25:57.587Z"
+  },
+  "UserData": {}
+}

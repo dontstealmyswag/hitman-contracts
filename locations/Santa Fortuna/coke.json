@@ -1,0 +1,450 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Id": "3f8806e3-a5a2-4513-b9a8-f2ef5c5fce5d",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "BriefingName": "toss the brick IN Jennifer's face",
+                "Image": "images/unlockables/item_perspective_c6e9414e-e2ce-470a-95bd-14cd25225878_0.jpg",
+                "TargetConditions": [],
+                "HUDTemplate": { "display": "Pacify Jennifer with cocaine" },
+                "BriefingText": "hit Jennifer with the coke while dressed as the servant!",
+                "Type": "statemachine",
+                "Definition": {
+                    "Scope": "hit",
+                    "Context": {
+                        "KilledActors": [],
+                        "Targets": ["3f3ae35f-c879-4ee9-b80b-bdb5b649fabe"]
+                    },
+                    "States": {
+                        "Start": {
+                            "Pacify": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "3f3ae35f-c879-4ee9-b80b-bdb5b649fabe"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.KillItemRepositoryId",
+                                                    "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "2dec1e42-0093-462a-83aa-c0f4d82ac224"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "3f3ae35f-c879-4ee9-b80b-bdb5b649fabe"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "3f3ae35f-c879-4ee9-b80b-bdb5b649fabe"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "GirlDead": { "Transition": "Failure" },
+                            "ServantOutfitLost": { "Transition": "Failure" }
+                        }
+                    }
+                }
+            },
+            {
+                "Id": "d3d48a2c-bed0-422d-b3e6-f60a1dc70992",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "BriefingName": "toss the brick IN Yoko's face",
+                "Image": "images/unlockables/item_perspective_c6e9414e-e2ce-470a-95bd-14cd25225878_0.jpg",
+                "TargetConditions": [],
+                "HUDTemplate": { "display": "Pacify Yoko with cocaine" },
+                "BriefingText": "hit Yoko with the coke while dressed as the servant!",
+                "Type": "statemachine",
+                "Definition": {
+                    "Scope": "hit",
+                    "Context": {
+                        "KilledActors": [],
+                        "Targets": ["79d13740-8f54-4486-a486-feceb1342f51"]
+                    },
+                    "States": {
+                        "Start": {
+                            "Pacify": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "79d13740-8f54-4486-a486-feceb1342f51"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.KillItemRepositoryId",
+                                                    "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "2dec1e42-0093-462a-83aa-c0f4d82ac224"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "79d13740-8f54-4486-a486-feceb1342f51"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "79d13740-8f54-4486-a486-feceb1342f51"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "GirlDead": { "Transition": "Failure" },
+                            "ServantOutfitLost": { "Transition": "Failure" }
+                        }
+                    }
+                }
+            },
+            {
+                "Id": "05eaf4af-d198-47c3-81b5-5081f70843fe",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "BriefingName": "toss the brick IN Ginette's face",
+                "Image": "images/unlockables/item_perspective_c6e9414e-e2ce-470a-95bd-14cd25225878_0.jpg",
+                "TargetConditions": [],
+                "HUDTemplate": { "display": "Pacify Ginette with cocaine" },
+                "BriefingText": "hit Ginette with the coke while dressed as the servant!",
+                "Type": "statemachine",
+                "Definition": {
+                    "Scope": "hit",
+                    "Context": {
+                        "KilledActors": [],
+                        "Targets": ["f6b5c891-c4eb-429c-8e75-cfd1d37fa858"]
+                    },
+                    "States": {
+                        "Start": {
+                            "Pacify": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "f6b5c891-c4eb-429c-8e75-cfd1d37fa858"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.KillItemRepositoryId",
+                                                    "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "2dec1e42-0093-462a-83aa-c0f4d82ac224"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "f6b5c891-c4eb-429c-8e75-cfd1d37fa858"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "f6b5c891-c4eb-429c-8e75-cfd1d37fa858"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "GirlDead": { "Transition": "Failure" },
+                            "ServantOutfitLost": { "Transition": "Failure" }
+                        }
+                    }
+                }
+            },
+            {
+                "Id": "01d2a379-967e-4ae6-81ec-273d4deec8ac",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "BriefingName": "toss the brick IN Margarita's face",
+                "Image": "images/unlockables/item_perspective_c6e9414e-e2ce-470a-95bd-14cd25225878_0.jpg",
+                "TargetConditions": [],
+                "HUDTemplate": { "display": "Pacify Margarita with cocaine" },
+                "BriefingText": "hit Margarita with the coke while dressed as the servant!",
+                "Type": "statemachine",
+                "Definition": {
+                    "Scope": "hit",
+                    "Context": {
+                        "KilledActors": [],
+                        "Targets": ["2f29f64c-6e73-4b5b-844f-e6bbd6b2b788"]
+                    },
+                    "States": {
+                        "Start": {
+                            "Pacify": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "2f29f64c-6e73-4b5b-844f-e6bbd6b2b788"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.KillItemRepositoryId",
+                                                    "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "2dec1e42-0093-462a-83aa-c0f4d82ac224"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "2f29f64c-6e73-4b5b-844f-e6bbd6b2b788"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "2f29f64c-6e73-4b5b-844f-e6bbd6b2b788"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "GirlDead": { "Transition": "Failure" },
+                            "ServantOutfitLost": { "Transition": "Failure" }
+                        }
+                    }
+                }
+            },
+            {
+                "Id": "bb1a4f74-efa6-465f-834b-7bea9f3512e0",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "BriefingName": "toss the brick IN Odina's face",
+                "Image": "images/unlockables/item_perspective_c6e9414e-e2ce-470a-95bd-14cd25225878_0.jpg",
+                "TargetConditions": [],
+                "HUDTemplate": { "display": "Pacify Odina with cocaine" },
+                "BriefingText": "hit Odina with the coke while dressed as the servant!",
+                "Type": "statemachine",
+                "Definition": {
+                    "Scope": "hit",
+                    "Context": {
+                        "KilledActors": [],
+                        "Targets": ["bebde4ed-9ec3-44cc-8b7d-5182e41947d1"]
+                    },
+                    "States": {
+                        "Start": {
+                            "Pacify": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "bebde4ed-9ec3-44cc-8b7d-5182e41947d1"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.KillItemRepositoryId",
+                                                    "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "2dec1e42-0093-462a-83aa-c0f4d82ac224"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "bebde4ed-9ec3-44cc-8b7d-5182e41947d1"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "bebde4ed-9ec3-44cc-8b7d-5182e41947d1"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ],
+                            "GirlDead": { "Transition": "Failure" },
+                            "ServantOutfitLost": { "Transition": "Failure" }
+                        }
+                    }
+                }
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [],
+        "MandatoryLoadout": [
+            {
+                "Id": "Tool_Coin",
+                "Properties": {
+                    "LoadoutSlot": "gear",
+                    "RepositoryId": "dda002e9-02b1-4208-82a5-cf059f3c79cf"
+                }
+            },
+            {
+                "Id": "Poison_Chloroform",
+                "Properties": {
+                    "LoadoutSlot": "poison",
+                    "RepositoryId": "3cf48e44-6e0f-4e4d-9d21-6a4af476118c"
+                }
+            },
+            {
+                "Id": "Melee_Cocaine",
+                "Properties": {
+                    "LoadoutSlot": "melee",
+                    "RepositoryId": "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                }
+            },
+            {
+                "Id": "Melee_Cocaine",
+                "Properties": {
+                    "LoadoutSlot": "melee",
+                    "RepositoryId": "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                }
+            },
+            {
+                "Id": "Melee_Cocaine",
+                "Properties": {
+                    "LoadoutSlot": "melee",
+                    "RepositoryId": "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                }
+            },
+            {
+                "Id": "Melee_Cocaine",
+                "Properties": {
+                    "LoadoutSlot": "melee",
+                    "RepositoryId": "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                }
+            },
+            {
+                "Id": "Melee_Cocaine",
+                "Properties": {
+                    "LoadoutSlot": "melee",
+                    "RepositoryId": "c6e9414e-e2ce-470a-95bd-14cd25225878"
+                }
+            }
+        ]
+    },
+    "Metadata": {
+        "Title": "Tough Love",
+        "Description": "All these beautiful young women are destroying their bodies with drugs! Help save them by smashing them in the face with cocaine! (mandatory loadout includes 5 bricks for your convenience)",
+        "Entitlements": [
+            "LOCATION_COLOMBIA"
+        ],
+        "ScenePath": "assembly:/_pro/scenes/missions/colombia/scene_hippo.entity",
+        "Location": "LOCATION_COLOMBIA",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.23.0.0",
+        "ServerVersion": "8.23.0.0",
+        "Type": "usercreated",
+        "Id": "9c25bd0b-e35d-490a-ae2b-08e59f8f8d81",
+        "PublicId": "184492205280",
+        "TileImage": "$($repository 3f3ae35f-c879-4ee9-b80b-bdb5b649fabe).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "3f3ae35f-c879-4ee9-b80b-bdb5b649fabe"
+            },
+            {
+                "Id": "79d13740-8f54-4486-a486-feceb1342f51"
+            },
+            {
+                "Id": "f6b5c891-c4eb-429c-8e75-cfd1d37fa858"
+            },
+            {
+                "Id": "2f29f64c-6e73-4b5b-844f-e6bbd6b2b788"
+            },
+            {
+                "Id": "bebde4ed-9ec3-44cc-8b7d-5182e41947d1"
+            }
+        ],
+        "CreationTimestamp": "2026-03-10T16:59:02.307Z"
+    },
+    "UserData": {}
+}

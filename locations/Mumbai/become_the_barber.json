@@ -1,0 +1,439 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "d9993570-292d-4a33-81cf-dd4df5d91132",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 5ce075c6-c78a-4a5f-ae5d-9a516404ac46).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 5ce075c6-c78a-4a5f-ae5d-9a516404ac46).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": [
+                    {
+                        "Type": "disguise",
+                        "RepositoryId": "e9dffefc-e896-46e4-b158-1b401b015764",
+                        "HardCondition": false,
+                        "ObjectiveId": "8929aea0-c191-4d7e-8fbb-11cd6e7c7a9a",
+                        "KillMethod": ""
+                    },
+                    {
+                        "Type": "killmethod",
+                        "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54",
+                        "HardCondition": false,
+                        "ObjectiveId": "b12bc844-42c2-4f85-89e1-5b06cf9ff074",
+                        "KillMethod": "pistol"
+                    }
+                ]
+            },
+            {
+                "Type": "statemachine",
+                "Id": "8929aea0-c191-4d7e-8fbb-11cd6e7c7a9a",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitRepositoryId",
+                                                    "e9dffefc-e896-46e4-b158-1b401b015764"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "b12bc844-42c2-4f85-89e1-5b06cf9ff074",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                                                ]
+                                            },
+                                            {
+                                                "$any": {
+                                                    "?": {
+                                                        "$or": [
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "pistol"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "close_combat_pistol_elimination"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "in": [
+                                                        "$Value.KillMethodBroad",
+                                                        "$Value.KillMethodStrict"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "Type": "statemachine",
+                "Id": "c2c18bd6-9b8a-4829-8572-e671c5d02b19",
+                "Category": "primary",
+                "ObjectiveType": "custom",
+                "ForceShowOnLoadingScreen": true,
+                "Image": "images/unlockables/item_perspective_dda002e9-02b1-4208-82a5-cf059f3c79cf_0.jpg",
+                "BriefingName": "Time to Shine",
+                "LongBriefingText": "Find & Retrieve coins",
+                "BriefingText": "Retrieve coins",
+                "HUDTemplate": {
+                    "display": "Collect coins",
+                    "iconType": 17
+                },
+                "Definition": {
+                    "Context": {
+                        "ItemCollected": 0,
+                        "CollectionStates": 0,
+                        "ItemUncollected": 5,
+                        "ItemCollectedExtra": 0
+                    },
+                    "ContextListeners": {
+                        "ItemUncollected": {
+                            "type": "objective-counter",
+                            "header": "UI_HUD_SUBACTIONS_MISSING"
+                        }
+                    },
+                    "States": {
+                        "Start": {
+                            "ItemPickedUp": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$inc": "ItemCollected"
+                                        }, {
+                                            "$dec": "ItemUncollected"
+                                        }
+                                    ]
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.ItemUncollected", 0]
+                                            }, {
+                                                "$eq": ["$.ItemCollectedExtra", 0]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 0]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": {
+                                        "$set": ["CollectionStates", 1]
+                                    },
+                                    "Transition": "Success"
+                                }
+                            ],
+                            "ItemDropped": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$inc": "ItemUncollected"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ItemRemovedFromInventory": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 0]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$inc": "ItemUncollected"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "Success": {
+                            "ItemPickedUp": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$inc": "ItemCollected"
+                                        }, {
+                                            "$inc": "ItemCollectedExtra"
+                                        }, {
+                                            "$set": ["CollectionStates", 2]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ItemDropped": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 1]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$inc": "ItemUncollected"
+                                        }
+                                    ]
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 1]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": {
+                                        "$set": ["CollectionStates", 0]
+                                    },
+                                    "Transition": "Start"
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 2]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$dec": "ItemCollectedExtra"
+                                        }
+                                    ]
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.ItemUncollected", 0]
+                                            }, {
+                                                "$eq": ["$.ItemCollectedExtra", 0]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 2]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": {
+                                        "$set": ["CollectionStates", 1]
+                                    }
+                                }
+                            ],
+                            "ItemRemovedFromInventory": [{
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 1]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$inc": "ItemUncollected"
+                                        }
+                                    ]
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 1]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": {
+                                        "$set": ["CollectionStates", 0]
+                                    },
+                                    "Transition": "Start"
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 2]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": [{
+                                            "$dec": "ItemCollected"
+                                        }, {
+                                            "$dec": "ItemCollectedExtra"
+                                        }
+                                    ]
+                                }, {
+                                    "Condition": {
+                                        "$and": [{
+                                                "$eq": ["$Value.RepositoryId", "dda002e9-02b1-4208-82a5-cf059f3c79cf"]
+                                            }, {
+                                                "$eq": ["$.ItemUncollected", 0]
+                                            }, {
+                                                "$eq": ["$.ItemCollectedExtra", 0]
+                                            }, {
+                                                "$eq": ["$.CollectionStates", 2]
+                                            }
+                                        ]
+                                    },
+                                    "Actions": {
+                                        "$set": ["CollectionStates", 1]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": []
+    },
+    "Metadata": {
+        "Title": "all in a days work - draft",
+        "Description": "become the barber",
+        "Entitlements": [
+            "LOCATION_MUMBAI"
+        ],
+        "ScenePath": "assembly:/_PRO/Scenes/Missions/Mumbai/scene_mongoose.entity",
+        "Location": "LOCATION_MUMBAI",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.23.0.0",
+        "ServerVersion": "8.23.0.0",
+        "Type": "usercreated",
+        "Id": "f9a52e15-dd58-46e9-ba85-7681e26d004a",
+        "PublicId": "185895854768",
+        "TileImage": "$($repository 5ce075c6-c78a-4a5f-ae5d-9a516404ac46).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "5ce075c6-c78a-4a5f-ae5d-9a516404ac46"
+            }
+        ],
+        "CreationTimestamp": "2026-05-23T21:20:26.646Z"
+    },
+    "UserData": {}
+}

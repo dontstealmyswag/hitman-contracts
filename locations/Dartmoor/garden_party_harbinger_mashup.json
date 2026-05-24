@@ -1,0 +1,162 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "5e920b5a-3c95-496f-b298-68fa101f1ceb",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 79789e74-439a-44c1-82a2-2161ca5a53a0).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 79789e74-439a-44c1-82a2-2161ca5a53a0).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "79789e74-439a-44c1-82a2-2161ca5a53a0"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "79789e74-439a-44c1-82a2-2161ca5a53a0"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "d1abfe67-e312-4a81-a11e-d8a62cb47bea",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository f87c5f56-3460-4218-8409-990f629fe4c4).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository f87c5f56-3460-4218-8409-990f629fe4c4).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "f87c5f56-3460-4218-8409-990f629fe4c4"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "f87c5f56-3460-4218-8409-990f629fe4c4"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "1d941f1e-bea6-4f65-a3e3-d9f17f52052b",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "Gregory Carlisle [Optional]"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "Gregory Carlisle [Optional]"
+                        }
+                    }
+                },
+                "Category": "secondary",
+                "IsOptional": true,
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "d5c46c3d-e2d3-4078-9899-d100e3345de8"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "d5c46c3d-e2d3-4078-9899-d100e3345de8"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": []
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+            "assembly:/_pro/scenes/missions/ancestral/mission_filur.brick"
+        ]
+    },
+    "Metadata": {
+        "Title": "Garden Party - Harbinger Mashup",
+        "Description": "Merged targets from Garden Show and The Harbinger. Gregory Carlisle is optional.",
+        "Entitlements": [],
+        "ScenePath": "assembly:/_pro/scenes/missions/Ancestral/scene_smoothsnake.entity",
+        "Location": "LOCATION_ANCESTRAL_SMOOTHSNAKE",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.23.0.0",
+        "ServerVersion": "8.23.0.0",
+        "Type": "usercreated",
+        "Id": "d1688b91-c1fb-4c95-8836-f8fd201c94f2",
+        "PublicId": "124584098188",
+        "TileImage": "$($repository d5c46c3d-e2d3-4078-9899-d100e3345de8).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "79789e74-439a-44c1-82a2-2161ca5a53a0"
+            },
+            {
+                "Id": "f87c5f56-3460-4218-8409-990f629fe4c4"
+            },
+            {
+                "Id": "d5c46c3d-e2d3-4078-9899-d100e3345de8"
+            }
+        ],
+        "CreationTimestamp": "2026-05-24T09:08:23.667Z"
+    },
+    "UserData": {}
+}

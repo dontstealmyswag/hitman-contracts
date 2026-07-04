@@ -186,67 +186,6 @@
       },
       {
         "Type": "statemachine",
-        "Id": "d15385a0-12e3-4d32-8bd4-e42162e07a19",
-        "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 51956938-6d90-4f1b-822c-2d984189ea1f).Name" } },
-        "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository 51956938-6d90-4f1b-822c-2d984189ea1f).Name" } } },
-        "Category": "primary",
-        "Definition": {
-          "Scope": "Hit",
-          "Context": { "Targets": [ "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-          "States": {
-            "Start": {
-              "Kill": [
-                {
-                  "Condition": {
-                    "$and": [
-                      { "$eq": [ "$Value.RepositoryId", "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-                      { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } }
-                    ]
-                  },
-                  "Transition": "Success"
-                },
-                {
-                  "Condition": { "$eq": [ "$Value.RepositoryId", "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-                  "Transition": "Failure"
-                }
-              ]
-            }
-          }
-        },
-        "TargetConditions": [
-          { "Type": "killmethod", "RepositoryId": "7d668011-77f9-4cae-97f1-e3eda5e0c8b2", "HardCondition": true, "ObjectiveId": "8f9268af-a7c2-437c-b707-b5b3d87751dd", "KillMethod": "consumed_poison" }
-        ]
-      },
-      {
-        "Type": "statemachine",
-        "Id": "8f9268af-a7c2-437c-b707-b5b3d87751dd",
-        "Category": "secondary",
-        "Definition": {
-          "Scope": "Hit",
-          "Context": { "Targets": [ "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-          "States": {
-            "Start": {
-              "Kill": [
-                {
-                  "Condition": {
-                    "$and": [
-                      { "$eq": [ "$Value.RepositoryId", "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-                      { "$any": { "?": { "$or": [ { "$eq": [ "$.#", "consumed_poison" ] }, { "$eq": [ "$.#", "poison" ] }, { "$eq": [ "$.#", "accident_poison" ] } ] }, "in": [ "$Value.KillMethodBroad", "$Value.KillMethodStrict" ] } }
-                    ]
-                  },
-                  "Transition": "Success"
-                },
-                {
-                  "Condition": { "$eq": [ "$Value.RepositoryId", "51956938-6d90-4f1b-822c-2d984189ea1f" ] },
-                  "Transition": "Failure"
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "Type": "statemachine",
         "Id": "c40695ff-d8ba-46df-b1bb-0f57abe4378e",
         "BriefingText": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository b13314ab-ea25-48b7-9e51-8ebb87788e20).Name" } },
         "HUDTemplate": { "display": { "$loc": { "key": "UI_CONTRACT_GENERAL_OBJ_KILL", "data": "$($repository b13314ab-ea25-48b7-9e51-8ebb87788e20).Name" } } },
@@ -1016,7 +955,7 @@
   },
   "Metadata": {
     "Title": "Hokkaido Mass Poisoning",
-    "Description": "16 targets must ALL be eliminated by poisoning. You start with plenty of lethal pills in your inventory as well as your tactical pistol and a number of useful tools.",
+    "Description": "15 targets must ALL be eliminated by poisoning. You start with plenty of lethal pills in your inventory as well as your tactical pistol and a number of useful tools.",
     "Entitlements": [
       "LOCATION_HOKKAIDO"
     ],
@@ -1034,7 +973,6 @@
       { "Id": "774d95d9-366b-4f5d-98c0-43fd9505c80d" },
       { "Id": "85750842-3f27-4de1-ac2b-dcaf2abc5c48" },
       { "Id": "90527ca8-b658-4b26-bc0a-9c7018881814" },
-      { "Id": "51956938-6d90-4f1b-822c-2d984189ea1f" },
       { "Id": "b13314ab-ea25-48b7-9e51-8ebb87788e20" },
       { "Id": "b54f4698-f4ea-4edf-984a-7304bd6eae71" },
       { "Id": "a7f5f417-b77e-4ade-8da4-c66b2811449f" },

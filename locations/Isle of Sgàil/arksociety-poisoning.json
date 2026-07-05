@@ -3386,12 +3386,6 @@
             { "Id": "Poisons_Pills_Emetic", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "c5ec6168-2e5e-4340-b71a-c60f2ee6bd66" } },
             { "Id": "Poisons_Pills_Emetic", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "c5ec6168-2e5e-4340-b71a-c60f2ee6bd66" } },
             { "Id": "Poisons_Pills_Emetic", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "c5ec6168-2e5e-4340-b71a-c60f2ee6bd66" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
-            { "Id": "Poisons_Pills_Sedative", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ecf7f361-c2aa-4d96-b66d-e973c3e87154" } },
             { "Id": "Distractions_Commemorative_Token", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "da6ae60b-092d-4ad9-aa3c-322c8cb21985" } },
             { "Id": "Distractions_Commemorative_Token", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "da6ae60b-092d-4ad9-aa3c-322c8cb21985" } },
             { "Id": "Distractions_Commemorative_Token", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "da6ae60b-092d-4ad9-aa3c-322c8cb21985" } },
@@ -3416,7 +3410,8 @@
             { "Id": "Explosive_Emetic_Ducky", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "44654cf9-515c-414e-9f79-a1649d5ba111" } },
             { "Id": "Explosive_Emetic_Ducky", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "44654cf9-515c-414e-9f79-a1649d5ba111" } },
             { "Id": "Explosive_Emetic_Ducky", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "44654cf9-515c-414e-9f79-a1649d5ba111" } },
-            { "Id": "Boombox_Distraction", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "bdc60c80-6c65-4cae-8ac0-24374a8512b7" } },
+            { "Id": "Explosive_Emetic_Ducky", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "44654cf9-515c-414e-9f79-a1649d5ba111" } },
+            { "Id": "Knight_Disguise", "Properties": { "LoadoutSlot": "disguise", "RepositoryId": "d743fe65-e46b-47d9-9b25-f6c0925fc822" } },
             { "Id": "Tools_Screwdriver_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "beb83e04-23d7-41ec-861b-eb014ebe474a" } }
         ],
         "GameChangers": [],
@@ -3426,7 +3421,7 @@
     },
     "Metadata": {
         "Title": "Ark Society Poisoning",
-        "Description": "Targets are optional and any disguise is allowed. If a listed target is killed, the kill must be by consumed poison; non-poison kills fail the target. Some targets require special event to be triggered.",
+        "Description": "Targets are optional and any disguise is allowed. If a listed target is killed, the kill must be by consumed poison; non-poison kills fail the target (not the whole mission). Some targets require special event to be triggered.",
         "Entitlements": [
             "LOCATION_NORTHSEA"
         ],

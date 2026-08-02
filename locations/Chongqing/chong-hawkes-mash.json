@@ -1,0 +1,192 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "5ba7d0dd-9ab7-4eb6-866d-5b04183b4e01",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 138078d6-0e9f-4e27-8ffb-373d6bbc6b62).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 138078d6-0e9f-4e27-8ffb-373d6bbc6b62).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": [
+                    {
+                        "Type": "hitmansuit",
+                        "RepositoryId": "de74b375-267d-4930-aedf-78dacf0f6f8d",
+                        "HardCondition": false,
+                        "ObjectiveId": "5196ead6-ffa7-4c7d-8d8c-3890c80bf10b",
+                        "KillMethod": ""
+                    },
+                    {
+                        "Type": "killmethod",
+                        "HardCondition": false,
+                        "ObjectiveId": "2f4ad4ce-79c0-42ff-a6b7-27f88d78f118",
+                        "KillMethod": "accident_push"
+                    }
+                ]
+            },
+            {
+                "Type": "statemachine",
+                "Id": "5196ead6-ffa7-4c7d-8d8c-3890c80bf10b",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitIsHitmanSuit",
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "2f4ad4ce-79c0-42ff-a6b7-27f88d78f118",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                                                ]
+                                            },
+                                            {
+                                                "$any": {
+                                                    "?": {
+                                                        "$eq": [
+                                                            "$.#",
+                                                            "accident_push"
+                                                        ]
+                                                    },
+                                                    "in": [
+                                                        "$Value.KillMethodBroad",
+                                                        "$Value.KillMethodStrict"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+            "assembly:/_pro/scenes/missions/sheep/gamechanger_sheep_opuntia.brick"
+        ]
+    },
+    "Metadata": {
+        "Title": "chongqing hawkes mash",
+        "Description": "draft",
+        "Entitlements": [
+            "LOCATION_WET"
+        ],
+        "ScenePath": "assembly:/_pro/scenes/missions/wet/scene_rat_basic.entity",
+        "Location": "LOCATION_WET_RAT",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.24.0.0",
+        "ServerVersion": "8.24.0.0",
+        "Type": "usercreated",
+        "Id": "8cb74f4f-df5e-4ae8-aa73-16ec719c6be7",
+        "PublicId": "125121625813",
+        "TileImage": "$($repository 138078d6-0e9f-4e27-8ffb-373d6bbc6b62).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "138078d6-0e9f-4e27-8ffb-373d6bbc6b62"
+            }
+        ],
+        "CreationTimestamp": "2026-06-27T02:35:25.951Z"
+    },
+    "UserData": {}
+}

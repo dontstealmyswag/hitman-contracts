@@ -1,0 +1,131 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "1e08c23f-7120-46a7-a2eb-e8ffd0fdfc56",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository c1304248-3508-4da9-8412-8c7da771d2e4).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository c1304248-3508-4da9-8412-8c7da771d2e4).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "c1304248-3508-4da9-8412-8c7da771d2e4"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "c1304248-3508-4da9-8412-8c7da771d2e4"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": [
+                    {
+                        "Type": "hitmansuit",
+                        "RepositoryId": "dd9792ec-4a1d-4c29-a928-a556fc0b6692",
+                        "HardCondition": false,
+                        "ObjectiveId": "21fc6131-b7bb-4cb0-8f9c-2e3cfabe7c3a",
+                        "KillMethod": ""
+                    }
+                ]
+            },
+            {
+                "Type": "statemachine",
+                "Id": "21fc6131-b7bb-4cb0-8f9c-2e3cfabe7c3a",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "c1304248-3508-4da9-8412-8c7da771d2e4"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "c1304248-3508-4da9-8412-8c7da771d2e4"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitIsHitmanSuit",
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "c1304248-3508-4da9-8412-8c7da771d2e4"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TargetConditions": []
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+             "assembly:/_pro/scenes/missions/bangkok/gamechanger_delphinium_overrides.brick"
+        ]
+    },
+    "Metadata": {
+        "Title": "colorado base",
+        "Description": "draft",
+        "Entitlements": [
+            "LOCATION_COLORADO"
+        ],
+        "ScenePath": "assembly:/_PRO/Scenes/Missions/Colorado_2/_scene_bull.entity",
+        "Location": "LOCATION_COLORADO",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.24.0.0",
+        "ServerVersion": "8.24.0.0",
+        "Type": "usercreated",
+        "Id": "183271ff-b250-4f57-ac96-435279004d11",
+        "PublicId": "138835178614",
+        "TileImage": "$($repository c1304248-3508-4da9-8412-8c7da771d2e4).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "c1304248-3508-4da9-8412-8c7da771d2e4"
+            }
+        ],
+        "CreationTimestamp": "2026-07-02T22:20:20.855Z"
+    },
+    "UserData": {}
+}

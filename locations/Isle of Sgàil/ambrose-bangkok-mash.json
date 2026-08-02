@@ -1,0 +1,203 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "29faeb48-651f-4f48-8de2-97e3f1d6bfb6",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 679eaa07-52f4-4419-ae39-a1582ac0f0ba).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 679eaa07-52f4-4419-ae39-a1582ac0f0ba).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": [
+                    {
+                        "Type": "hitmansuit",
+                        "RepositoryId": "4fc9396e-2619-4e66-a51e-2bd366230da7",
+                        "HardCondition": false,
+                        "ObjectiveId": "06508c38-d706-46e6-9fe3-27da0f7814d0",
+                        "KillMethod": ""
+                    },
+                    {
+                        "Type": "killmethod",
+                        "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54",
+                        "HardCondition": false,
+                        "ObjectiveId": "8bdef11d-4c2f-4885-94b5-3c6ebe5403fa",
+                        "KillMethod": "pistol"
+                    }
+                ]
+            },
+            {
+                "Type": "statemachine",
+                "Id": "06508c38-d706-46e6-9fe3-27da0f7814d0",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitIsHitmanSuit",
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "8bdef11d-4c2f-4885-94b5-3c6ebe5403fa",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                                                ]
+                                            },
+                                            {
+                                                "$any": {
+                                                    "?": {
+                                                        "$or": [
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "pistol"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "close_combat_pistol_elimination"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "in": [
+                                                        "$Value.KillMethodBroad",
+                                                        "$Value.KillMethodStrict"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+             "assembly:/_pro/scenes/missions/bangkok/gamechanger_delphinium_overrides.brick"
+        ]
+    },
+    "Metadata": {
+        "Title": "ambrose",
+        "Description": "A contract has been issued, and you have been cleared to engage. Eliminate any targets as cleanly as possible, avoiding collateral damage as far as possible.",
+        "Entitlements": [
+            "LOCATION_ROCKY"
+        ],
+        "ScenePath": "assembly:/_pro/scenes/missions/Rocky/scene_dugong.entity",
+        "Location": "LOCATION_ROCKY_DUGONG",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.24.0.0",
+        "ServerVersion": "8.24.0.0",
+        "Type": "usercreated",
+        "Id": "43d6b14c-55ab-4e33-bd06-09eefcb0ad45",
+        "PublicId": "119701620689",
+        "TileImage": "$($repository 679eaa07-52f4-4419-ae39-a1582ac0f0ba).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "679eaa07-52f4-4419-ae39-a1582ac0f0ba"
+            }
+        ],
+        "CreationTimestamp": "2026-07-05T12:50:44.069Z"
+    },
+    "UserData": {}
+}

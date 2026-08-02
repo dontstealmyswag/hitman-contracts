@@ -1,0 +1,207 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "3d943033-02bd-42ad-91c8-f6c42b152f23",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "3ef908f2-009d-4931-9642-8f5f68021f15"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "3ef908f2-009d-4931-9642-8f5f68021f15"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": [
+                    {
+                        "Type": "hitmansuit",
+                        "RepositoryId": "3ff21e5c-5ec2-4868-903b-e7564c587aa7",
+                        "HardCondition": false,
+                        "ObjectiveId": "73697b12-bf54-4851-9622-7df989fe5792",
+                        "KillMethod": ""
+                    },
+                    {
+                        "Type": "killmethod",
+                        "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54",
+                        "HardCondition": false,
+                        "ObjectiveId": "4059a6ed-2e50-4912-88d4-b4e7c8ef2eda",
+                        "KillMethod": "pistol"
+                    }
+                ]
+            },
+            {
+                "Type": "statemachine",
+                "Id": "73697b12-bf54-4851-9622-7df989fe5792",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "3ef908f2-009d-4931-9642-8f5f68021f15"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "3ef908f2-009d-4931-9642-8f5f68021f15"
+                                                ]
+                                            },
+                                            {
+                                                "$eq": [
+                                                    "$Value.OutfitIsHitmanSuit",
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "3ef908f2-009d-4931-9642-8f5f68021f15"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TargetConditions": []
+            },
+            {
+                "Type": "statemachine",
+                "Id": "4059a6ed-2e50-4912-88d4-b4e7c8ef2eda",
+                "Category": "secondary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "3ef908f2-009d-4931-9642-8f5f68021f15"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": [
+                                {
+                                    "Condition": {
+                                        "$and": [
+                                            {
+                                                "$eq": [
+                                                    "$Value.RepositoryId",
+                                                    "3ef908f2-009d-4931-9642-8f5f68021f15"
+                                                ]
+                                            },
+                                            {
+                                                "$any": {
+                                                    "?": {
+                                                        "$or": [
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "pistol"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "$eq": [
+                                                                    "$.#",
+                                                                    "close_combat_pistol_elimination"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "in": [
+                                                        "$Value.KillMethodBroad",
+                                                        "$Value.KillMethodStrict"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Transition": "Success"
+                                },
+                                {
+                                    "Condition": {
+                                        "$eq": [
+                                            "$Value.RepositoryId",
+                                            "3ef908f2-009d-4931-9642-8f5f68021f15"
+                                        ]
+                                    },
+                                    "Transition": "Failure"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+            "assembly:/_PRO/Scenes/Missions/TheArk/gamechanger_no_constant_glow.brick",
+            "assembly:/_pro/scenes/missions/theark/elusive_penicillin.brick",
+            "assembly:/_PRO/scenes/missions/theark/elusive_goldendoublet.brick",
+            "assembly:/_PRO/scenes/missions/theark/elusive_skittlebomb.brick"
+            
+        ]
+    },
+    "Metadata": {
+        "Title": "ark society - all elusive targets",
+        "Description": "all 4 elusives in one mission",
+        "Entitlements": [
+            "LOCATION_NORTHSEA"
+        ],
+        "ScenePath": "assembly:/_pro/scenes/missions/theark/scene_pomada.entity",
+        "Location": "LOCATION_NORTHSEA",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.24.0.0",
+        "ServerVersion": "8.24.0.0",
+        "Type": "usercreated",
+        "Id": "d0eff264-8c8e-4fec-9974-07977900636e",
+        "PublicId": "191913997788",
+        "TileImage": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "3ef908f2-009d-4931-9642-8f5f68021f15"
+            }
+        ],
+        "CreationTimestamp": "2026-07-05T06:05:56.376Z"
+    },
+    "UserData": {}
+}

@@ -1,207 +1,234 @@
 {
-    "Data": {
-        "Objectives": [
-            {
-                "Type": "statemachine",
-                "Id": "3d943033-02bd-42ad-91c8-f6c42b152f23",
-                "BriefingText": {
-                    "$loc": {
-                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
-                        "data": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Name"
-                    }
-                },
-                "HUDTemplate": {
-                    "display": {
-                        "$loc": {
-                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
-                            "data": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Name"
-                        }
-                    }
-                },
-                "Category": "primary",
-                "Definition": {
-                    "Scope": "Hit",
-                    "Context": {
-                        "Targets": [
-                            "3ef908f2-009d-4931-9642-8f5f68021f15"
-                        ]
-                    },
-                    "States": {
-                        "Start": {
-                            "Kill": {
-                                "Condition": {
-                                    "$eq": [
-                                        "$Value.RepositoryId",
-                                        "3ef908f2-009d-4931-9642-8f5f68021f15"
-                                    ]
-                                },
-                                "Transition": "Success"
-                            }
-                        }
-                    }
-                },
-                "TargetConditions": [
-                    {
-                        "Type": "hitmansuit",
-                        "RepositoryId": "3ff21e5c-5ec2-4868-903b-e7564c587aa7",
-                        "HardCondition": false,
-                        "ObjectiveId": "73697b12-bf54-4851-9622-7df989fe5792",
-                        "KillMethod": ""
-                    },
-                    {
-                        "Type": "killmethod",
-                        "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54",
-                        "HardCondition": false,
-                        "ObjectiveId": "4059a6ed-2e50-4912-88d4-b4e7c8ef2eda",
-                        "KillMethod": "pistol"
-                    }
-                ]
-            },
-            {
-                "Type": "statemachine",
-                "Id": "73697b12-bf54-4851-9622-7df989fe5792",
-                "Category": "secondary",
-                "Definition": {
-                    "Scope": "Hit",
-                    "Context": {
-                        "Targets": [
-                            "3ef908f2-009d-4931-9642-8f5f68021f15"
-                        ]
-                    },
-                    "States": {
-                        "Start": {
-                            "Kill": [
-                                {
-                                    "Condition": {
-                                        "$and": [
-                                            {
-                                                "$eq": [
-                                                    "$Value.RepositoryId",
-                                                    "3ef908f2-009d-4931-9642-8f5f68021f15"
-                                                ]
-                                            },
-                                            {
-                                                "$eq": [
-                                                    "$Value.OutfitIsHitmanSuit",
-                                                    true
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "Transition": "Success"
-                                },
-                                {
-                                    "Condition": {
-                                        "$eq": [
-                                            "$Value.RepositoryId",
-                                            "3ef908f2-009d-4931-9642-8f5f68021f15"
-                                        ]
-                                    },
-                                    "Transition": "Failure"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "TargetConditions": []
-            },
-            {
-                "Type": "statemachine",
-                "Id": "4059a6ed-2e50-4912-88d4-b4e7c8ef2eda",
-                "Category": "secondary",
-                "Definition": {
-                    "Scope": "Hit",
-                    "Context": {
-                        "Targets": [
-                            "3ef908f2-009d-4931-9642-8f5f68021f15"
-                        ]
-                    },
-                    "States": {
-                        "Start": {
-                            "Kill": [
-                                {
-                                    "Condition": {
-                                        "$and": [
-                                            {
-                                                "$eq": [
-                                                    "$Value.RepositoryId",
-                                                    "3ef908f2-009d-4931-9642-8f5f68021f15"
-                                                ]
-                                            },
-                                            {
-                                                "$any": {
-                                                    "?": {
-                                                        "$or": [
-                                                            {
-                                                                "$eq": [
-                                                                    "$.#",
-                                                                    "pistol"
-                                                                ]
-                                                            },
-                                                            {
-                                                                "$eq": [
-                                                                    "$.#",
-                                                                    "close_combat_pistol_elimination"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    "in": [
-                                                        "$Value.KillMethodBroad",
-                                                        "$Value.KillMethodStrict"
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "Transition": "Success"
-                                },
-                                {
-                                    "Condition": {
-                                        "$eq": [
-                                            "$Value.RepositoryId",
-                                            "3ef908f2-009d-4931-9642-8f5f68021f15"
-                                        ]
-                                    },
-                                    "Transition": "Failure"
-                                }
-                            ]
-                        }
-                    }
-                }
+  "Data": {
+    "Objectives": [
+      {
+        "Type": "statemachine",
+        "Id": "9f741f10-ea94-4827-961d-c90de3e7e54e",
+        "BriefingText": {
+          "$loc": {
+            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+            "data": "$($repository 4c7c489d-3992-41ad-b2af-df3b3c431b53).Name"
+          }
+        },
+        "HUDTemplate": {
+          "display": {
+            "$loc": {
+              "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+              "data": "$($repository 4c7c489d-3992-41ad-b2af-df3b3c431b53).Name"
             }
-        ],
-        "GameChangers": [],
-        "Bricks": [
-            "assembly:/_PRO/Scenes/Missions/TheArk/gamechanger_no_constant_glow.brick",
-            "assembly:/_pro/scenes/missions/theark/elusive_penicillin.brick",
-            "assembly:/_PRO/scenes/missions/theark/elusive_goldendoublet.brick",
-            "assembly:/_PRO/scenes/missions/theark/elusive_skittlebomb.brick"
-            
-        ]
-    },
-    "Metadata": {
-        "Title": "ark society - all elusive targets",
-        "Description": "all 4 elusives in one mission",
-        "Entitlements": [
-            "LOCATION_NORTHSEA"
-        ],
-        "ScenePath": "assembly:/_pro/scenes/missions/theark/scene_pomada.entity",
-        "Location": "LOCATION_NORTHSEA",
-        "IsPublished": true,
-        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
-        "GameVersion": "8.24.0.0",
-        "ServerVersion": "8.24.0.0",
-        "Type": "usercreated",
-        "Id": "d0eff264-8c8e-4fec-9974-07977900636e",
-        "PublicId": "191913997788",
-        "TileImage": "$($repository 3ef908f2-009d-4931-9642-8f5f68021f15).Image",
-        "GroupObjectiveDisplayOrder": [
-            {
-                "Id": "3ef908f2-009d-4931-9642-8f5f68021f15"
+          }
+        },
+        "Category": "primary",
+        "Definition": {
+          "Scope": "Hit",
+          "Context": {
+            "Targets": [
+              "4c7c489d-3992-41ad-b2af-df3b3c431b53"
+            ]
+          },
+          "States": {
+            "Start": {
+              "Kill": {
+                "Condition": {
+                  "$eq": [
+                    "$Value.RepositoryId",
+                    "4c7c489d-3992-41ad-b2af-df3b3c431b53"
+                  ]
+                },
+                "Transition": "Success"
+              }
             }
-        ],
-        "CreationTimestamp": "2026-07-05T06:05:56.376Z"
-    },
-    "UserData": {}
+          }
+        },
+        "TargetConditions": []
+      },
+      {
+        "Type": "statemachine",
+        "Id": "0168822e-51fc-43b8-a667-43df63283674",
+        "BriefingText": {
+          "$loc": {
+            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+            "data": "$($repository 0808d791-d0ba-4c71-880f-a31c88ad69d9).Name"
+          }
+        },
+        "HUDTemplate": {
+          "display": {
+            "$loc": {
+              "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+              "data": "$($repository 0808d791-d0ba-4c71-880f-a31c88ad69d9).Name"
+            }
+          }
+        },
+        "Category": "primary",
+        "Definition": {
+          "Scope": "Hit",
+          "Context": {
+            "Targets": [
+              "0808d791-d0ba-4c71-880f-a31c88ad69d9"
+            ]
+          },
+          "States": {
+            "Start": {
+              "Kill": {
+                "Condition": {
+                  "$eq": [
+                    "$Value.RepositoryId",
+                    "0808d791-d0ba-4c71-880f-a31c88ad69d9"
+                  ]
+                },
+                "Transition": "Success"
+              }
+            }
+          }
+        },
+        "TargetConditions": []
+      },
+      {
+        "Type": "statemachine",
+        "Id": "22b031e5-b0ac-4d03-a14e-48c39c3aaabe",
+        "BriefingText": {
+          "$loc": {
+            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+            "data": "$($repository 531a270c-67a1-41a1-8dfd-c84a4e8ee127).Name"
+          }
+        },
+        "HUDTemplate": {
+          "display": {
+            "$loc": {
+              "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+              "data": "$($repository 531a270c-67a1-41a1-8dfd-c84a4e8ee127).Name"
+            }
+          }
+        },
+        "Category": "primary",
+        "Definition": {
+          "Scope": "Hit",
+          "Context": {
+            "Targets": [
+              "531a270c-67a1-41a1-8dfd-c84a4e8ee127"
+            ]
+          },
+          "States": {
+            "Start": {
+              "Kill": {
+                "Condition": {
+                  "$eq": [
+                    "$Value.RepositoryId",
+                    "531a270c-67a1-41a1-8dfd-c84a4e8ee127"
+                  ]
+                },
+                "Transition": "Success"
+              }
+            }
+          }
+        },
+        "TargetConditions": []
+      },
+      {
+        "Type": "statemachine",
+        "Id": "b88ea38d-0829-4a29-954b-dd1e4bf33b62",
+        "BriefingText": {
+          "$loc": {
+            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+            "data": "$($repository fbe2c0d4-91df-4499-8799-9a9a66073247).Name"
+          }
+        },
+        "HUDTemplate": {
+          "display": {
+            "$loc": {
+              "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+              "data": "$($repository fbe2c0d4-91df-4499-8799-9a9a66073247).Name"
+            }
+          }
+        },
+        "Category": "primary",
+        "Definition": {
+          "Scope": "Hit",
+          "Context": {
+            "Targets": [
+              "fbe2c0d4-91df-4499-8799-9a9a66073247"
+            ]
+          },
+          "States": {
+            "Start": {
+              "Kill": {
+                "Condition": {
+                  "$eq": [
+                    "$Value.RepositoryId",
+                    "fbe2c0d4-91df-4499-8799-9a9a66073247"
+                  ]
+                },
+                "Transition": "Success"
+              }
+            }
+          }
+        },
+        "TargetConditions": []
+      }
+    ],
+    "GameChangers": [],
+    "Bricks": [
+      "assembly:/_PRO/Scenes/Missions/TheArk/gamechanger_no_constant_glow.brick",
+      "assembly:/_pro/scenes/missions/theark/elusive_penicillin.brick",
+      "assembly:/_PRO/scenes/missions/theark/elusive_goldendoublet.brick",
+      "assembly:/_PRO/scenes/missions/theark/elusive_skittlebomb.brick"
+    ],
+    "MandatoryLoadout": [
+        { "Id": "FIREARMS_HERO_PISTOL_TACTICAL_ICA_19", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54" } },
+        { "Id": "Firearm_Dartgun_Tranquilizer", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "26b5496d-9a8c-4059-9d69-d8712078a33c" } },
+        { "Id": "Firearm_Dartgun_EmeticPoison", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "351c144c-8687-426a-a6f0-c4abd7021062" } },
+        { "Id": "Poisons_Sedative_Gumpack", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ddaf38de-2ad3-467d-bdd0-2f6b13cd3f51" } },
+        { "Id": "Poisons_Sedative_Gumpack", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ddaf38de-2ad3-467d-bdd0-2f6b13cd3f51" } },
+        { "Id": "Poisons_Sedative_Gumpack", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ddaf38de-2ad3-467d-bdd0-2f6b13cd3f51" } },
+        { "Id": "Tools_Handyman_Wrench", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "494e74b2-f3c0-4c77-be15-8f22a6eed97b" } },
+        { "Id": "Tools_Lockpick_S2", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "3ccbcbac-5822-4d26-bf10-7cd59796b822" } },
+        { "Id": "Tools_Crowbar_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ed550539-722d-447f-8ddf-207ed3402245" } },
+        { "Id": "Melee_Molotov_Cocktail", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "a83349bf-3d9c-43ec-92ee-c8c98cbeabc1" } },
+        { "Id": "Melee_Molotov_Cocktail", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "a83349bf-3d9c-43ec-92ee-c8c98cbeabc1" } },
+        { "Id": "Melee_Molotov_Cocktail", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "a83349bf-3d9c-43ec-92ee-c8c98cbeabc1" } },
+        { "Id": "Explosives_Devil_Rubberduck_Remote", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "7e52d861-481c-4f7c-87d2-6211d90586bf" } },
+        { "Id": "Explosives_Devil_Rubberduck_Remote", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "7e52d861-481c-4f7c-87d2-6211d90586bf" } },
+        { "Id": "Explosives_Devil_Rubberduck_Remote", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "7e52d861-481c-4f7c-87d2-6211d90586bf" } },
+        { "Id": "Explosives_Devil_Rubberduck_Remote", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "7e52d861-481c-4f7c-87d2-6211d90586bf" } },
+        { "Id": "Explosives_Devil_Rubberduck_Remote", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "7e52d861-481c-4f7c-87d2-6211d90586bf" } },
+        { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+        { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+        { "Id": "Poisons_Pills_Lethal", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ef63eda6-6411-4ce0-b35b-143fc5767fc0" } },
+        { "Id": "Tools_Screwdriver_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "beb83e04-23d7-41ec-861b-eb014ebe474a" } },
+        { "Id": "Stone_Disguise", "Properties": { "LoadoutSlot": "disguise", "RepositoryId": "c26fca2d-0b8b-4631-aa2a-bea38b2274f5" } }
+    ]
+  },
+  "Metadata": {
+    "Title": "Isle of Sgàil: all elusive targets",
+    "Description": "all 4 elusives in one mission",
+    "Entitlements": [
+      "LOCATION_NORTHSEA"
+    ],
+    "ScenePath": "assembly:/_pro/scenes/missions/theark/scene_pomada.entity",
+    "Location": "LOCATION_NORTHSEA",
+    "IsPublished": true,
+    "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+    "GameVersion": "8.24.0.0",
+    "ServerVersion": "8.24.0.0",
+    "Type": "usercreated",
+    "Id": "d0eff264-8c8e-4fec-9974-07977900636e",
+    "PublicId": "191913997788",
+    "TileImage": "$($repository 4c7c489d-3992-41ad-b2af-df3b3c431b53).Image",
+    "GroupObjectiveDisplayOrder": [
+      {
+        "Id": "4c7c489d-3992-41ad-b2af-df3b3c431b53"
+      },
+      {
+        "Id": "0808d791-d0ba-4c71-880f-a31c88ad69d9"
+      },
+      {
+        "Id": "531a270c-67a1-41a1-8dfd-c84a4e8ee127"
+      },
+      {
+        "Id": "fbe2c0d4-91df-4499-8799-9a9a66073247"
+      }
+    ],
+    "CreationTimestamp": "2026-07-05T06:05:56.376Z"
+  },
+  "UserData": {}
 }

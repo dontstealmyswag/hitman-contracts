@@ -40,22 +40,7 @@
                         }
                     }
                 },
-                "TargetConditions": [
-                    {
-                        "Type": "hitmansuit",
-                        "RepositoryId": "08022e2c-4954-4b63-b632-3ac50d018292",
-                        "HardCondition": false,
-                        "ObjectiveId": "c8077d9f-5b22-45c5-951a-7da3e3198774",
-                        "KillMethod": ""
-                    },
-                    {
-                        "Type": "killmethod",
-                        "RepositoryId": "35efd6dc-0387-4b56-83f0-4e6609bac93f",
-                        "HardCondition": false,
-                        "ObjectiveId": "09bc5a3a-45f3-4215-a3e3-498f35e2e533",
-                        "KillMethod": "pistol"
-                    }
-                ]
+                "TargetConditions": []
             },
             {
                 "Type": "statemachine",
@@ -97,119 +82,6 @@
                     }
                 },
                 "TargetConditions": []
-            },
-            {
-                "Type": "statemachine",
-                "Id": "c8077d9f-5b22-45c5-951a-7da3e3198774",
-                "Category": "secondary",
-                "Definition": {
-                    "Scope": "Hit",
-                    "Context": {
-                        "Targets": [
-                            "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                        ]
-                    },
-                    "States": {
-                        "Start": {
-                            "Kill": [
-                                {
-                                    "Condition": {
-                                        "$and": [
-                                            {
-                                                "$eq": [
-                                                    "$Value.RepositoryId",
-                                                    "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                                                ]
-                                            },
-                                            {
-                                                "$eq": [
-                                                    "$Value.OutfitIsHitmanSuit",
-                                                    true
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "Transition": "Success"
-                                },
-                                {
-                                    "Condition": {
-                                        "$eq": [
-                                            "$Value.RepositoryId",
-                                            "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                                        ]
-                                    },
-                                    "Transition": "Failure"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "TargetConditions": []
-            },
-            {
-                "Type": "statemachine",
-                "Id": "09bc5a3a-45f3-4215-a3e3-498f35e2e533",
-                "Category": "secondary",
-                "Definition": {
-                    "Scope": "Hit",
-                    "Context": {
-                        "Targets": [
-                            "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                        ]
-                    },
-                    "States": {
-                        "Start": {
-                            "Kill": [
-                                {
-                                    "Condition": {
-                                        "$and": [
-                                            {
-                                                "$eq": [
-                                                    "$Value.RepositoryId",
-                                                    "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                                                ]
-                                            },
-                                            {
-                                                "$any": {
-                                                    "?": {
-                                                        "$or": [
-                                                            {
-                                                                "$eq": [
-                                                                    "$.#",
-                                                                    "pistol"
-                                                                ]
-                                                            },
-                                                            {
-                                                                "$eq": [
-                                                                    "$.#",
-                                                                    "close_combat_pistol_elimination"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    "in": [
-                                                        "$Value.KillMethodBroad",
-                                                        "$Value.KillMethodStrict"
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "Transition": "Success"
-                                },
-                                {
-                                    "Condition": {
-                                        "$eq": [
-                                            "$Value.RepositoryId",
-                                            "da70a09e-606a-4527-b9f1-bdaff831e5d4"
-                                        ]
-                                    },
-                                    "Transition": "Failure"
-                                }
-                            ]
-                        }
-                    }
-                }
             }
         ],
         "GameChangers": [],
@@ -253,12 +125,14 @@
             { "Id": "RFID_Explosive", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "00bc7fdc-8cce-4cb5-b31a-4d2d8b4156f8" } },
             { "Id": "RFID_Explosive", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "00bc7fdc-8cce-4cb5-b31a-4d2d8b4156f8" } },
             { "Id": "RFID_Explosive", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "00bc7fdc-8cce-4cb5-b31a-4d2d8b4156f8" } },
+            { "Id": "Keycard_Hacker", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "8b114fce-586b-4b06-b446-75d0bb4a4cfb" } },
+            { "Id": "Keycard_Hacker", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "8b114fce-586b-4b06-b446-75d0bb4a4cfb" } },
             { "Id": "Grillcook_Disguise", "Properties": { "LoadoutSlot": "disguise", "RepositoryId": "c78008d6-e3b2-49bc-b45f-4d94dedaf169" } }
         ]
     },
     "Metadata": {
-        "Title": "politician + streamer",
-        "Description": "hawkes bay",
+        "Title": "Politician + Streamer",
+        "Description": "Hawkes Bay contract that combines Politician and Streamer elusive targets.",
         "Entitlements": [
             "LOCATION_NEWZEALAND"
         ],
@@ -268,10 +142,10 @@
         "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
         "GameVersion": "8.25.0.0",
         "ServerVersion": "8.25.0.0",
-        "Type": "usercreated",
+        "Type": "featured",
         "Id": "1f81bcaf-bae0-435b-99cc-2cd12934bd2c",
         "PublicId": "196314073078",
-        "TileImage": "$($repository da70a09e-606a-4527-b9f1-bdaff831e5d4).Image",
+        "TileImage": "$($repository c78008d6-e3b2-49bc-b45f-4d94dedaf169).Image",
         "GroupObjectiveDisplayOrder": [
             {
                 "Id": "da70a09e-606a-4527-b9f1-bdaff831e5d4"

@@ -1,0 +1,110 @@
+{
+    "Data": {
+        "Objectives": [
+            {
+                "Type": "statemachine",
+                "Id": "f38898c5-6127-4ee5-accb-986b75b2f1a2",
+                "BriefingText": {
+                    "$loc": {
+                        "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                        "data": "$($repository 0a63f93f-8f24-44e3-96c2-0785e57550d8).Name"
+                    }
+                },
+                "HUDTemplate": {
+                    "display": {
+                        "$loc": {
+                            "key": "UI_CONTRACT_GENERAL_OBJ_KILL",
+                            "data": "$($repository 0a63f93f-8f24-44e3-96c2-0785e57550d8).Name"
+                        }
+                    }
+                },
+                "Category": "primary",
+                "Definition": {
+                    "Scope": "Hit",
+                    "Context": {
+                        "Targets": [
+                            "0a63f93f-8f24-44e3-96c2-0785e57550d8"
+                        ]
+                    },
+                    "States": {
+                        "Start": {
+                            "Kill": {
+                                "Condition": {
+                                    "$eq": [
+                                        "$Value.RepositoryId",
+                                        "0a63f93f-8f24-44e3-96c2-0785e57550d8"
+                                    ]
+                                },
+                                "Transition": "Success"
+                            }
+                        }
+                    }
+                },
+                "TargetConditions": []
+            }
+        ],
+        "GameChangers": [],
+        "Bricks": [
+            "assembly:/_PRO/Scenes/Missions/trapped/gamechanger_bellflower_level2.brick"
+        ],
+        "MandatoryLoadout": [
+            { "Id": "FIREARMS_HERO_PISTOL_TACTICAL_ICA_19", "Properties": { "LoadoutSlot": "concealedweapon", "RepositoryId": "73875794-5a86-410e-84a4-1b5b2f7e5a54" } },
+            { "Id": "Tools_Handyman_Wrench", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "494e74b2-f3c0-4c77-be15-8f22a6eed97b" } },
+            { "Id": "Tools_Lockpick_S2", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "3ccbcbac-5822-4d26-bf10-7cd59796b822" } },
+            { "Id": "Tools_Crowbar_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "ed550539-722d-447f-8ddf-207ed3402245" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Car_Bomb", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "53284129-c50a-47a7-9efa-caa3b7503826" } },
+            { "Id": "Guard_Disguise", "Properties": { "LoadoutSlot": "disguise", "RepositoryId": "e77b5340-41d3-448a-84d3-a4f7f6426634" } },
+            { "Id": "Tools_Screwdriver_Purple", "Properties": { "LoadoutSlot": "gear", "RepositoryId": "beb83e04-23d7-41ec-861b-eb014ebe474a" } }
+        ]
+    },
+    "Metadata": {
+        "Title": "Carpathian Train Trip",
+        "Description": "Choo choooooooo",
+        "Entitlements": [
+            "LOCATION_TRAPPED"
+        ],
+        "ScenePath": "assembly:/_PRO/Scenes/Missions/trapped/scene_bellflower.entity",
+        "Location": "LOCATION_TRAPPED_WOLVERINE",
+        "IsPublished": true,
+        "CreatorUserId": "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        "GameVersion": "8.24.0.0",
+        "ServerVersion": "8.24.0.0",
+        "Type": "usercreated",
+        "Id": "cceccfc3-4c45-4f21-9632-87c2de75cf2e",
+        "PublicId": "612570964462",
+        "TileImage": "$($repository 0a63f93f-8f24-44e3-96c2-0785e57550d8).Image",
+        "GroupObjectiveDisplayOrder": [
+            {
+                "Id": "0a63f93f-8f24-44e3-96c2-0785e57550d8"
+            }
+        ],
+        "CreationTimestamp": "2026-08-21T00:30:59.237944Z"
+    },
+    "UserData": {}
+}

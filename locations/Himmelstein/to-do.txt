@@ -1,0 +1,2 @@
+- add back multiplayer functionality
+- improve free-roam mod in order to enable more kill methods
